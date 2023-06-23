@@ -1,0 +1,43 @@
+.FruitList {
+  display: inline-block;
+  flex-wrap: wrap;
+  margin: 0 auto;
+
+  padding: 30px;
+}
+h1 {
+  text-align: center;
+  background-image: linear-gradient(to bottom, red, yellow, green, blue);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+}
+
+.ButtonContainer {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+.ButtonContainer > .deleteAll {
+  color: red;
+  box-shadow: 3px 4px 0px 0px #1564ad;
+  background-color: #79bbff;
+  border-radius: 5px;
+  border: 1px solid #337bc4;
+  display: inline-block;
+  font-family: Arial;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 12px 44px;
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #528ecc;
+}
+
+.ButtonContainer > .deleteAll:hover {
+  background-color: #378de5;
+}
+.ButtonContainer > .deleteAll:active {
+  position: relative;
+  top: 1px;
+}
+
