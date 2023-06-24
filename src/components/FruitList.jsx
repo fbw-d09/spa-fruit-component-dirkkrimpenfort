@@ -13,10 +13,19 @@ function FruitList() {
     const removeFruit = (id) => {
       setFruits(fruits.filter((fruit) => fruit.id !== id));
     };
-  
+
+    const [buttonText, setButtonText] = useState('Alles löschen');
+    const [clickFunction, setClickFunction] = useState(() => () => removeAllFruits());
+    
     const removeAllFruits = () => {
       setFruits([]);
+      setButtonText('Alle Früchte anzeigen');
+      setClickFunction(() => () => showAllFruits());
     };
+
+    const showAllFruits = () => {
+        window.location.reload();
+    }
     
     return (
       <div className="FruitList">
@@ -31,7 +40,7 @@ function FruitList() {
         </div>
       ))}
       <div className="ButtonContainer">
-        <button  className="deleteAll" onClick={removeAllFruits}>Alles löschen</button>
+        <button  className="deleteAll" onClick={clickFunction} >{buttonText}</button>
       </div>
       
       </div>  
